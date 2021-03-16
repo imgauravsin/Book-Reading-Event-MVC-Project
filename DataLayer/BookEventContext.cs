@@ -1,0 +1,21 @@
+﻿using DataLayer.EntityModel;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataLayer
+{
+    public class BookEventContext: DbContext
+    {
+        public DbSet<Event> events { get; set; }
+
+        public DbSet<Comment> comment { get; set; }
+
+        public DbSet<Invitation> invitation { get; set; }
+
+        public DbSet<User> user { get; set; }
+    }
+}

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Book Reading Event</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+ 
+    <nav class="navbar navbar-inverse">
+        <div class="badge badge-success">Welcome to Book Reading Event</div>
+
+        @{
+            User_Interface_BookEvent.Controllers.CreatedEntry testuser = new User_Interface_BookEvent.Controllers.CreatedEntry();
+
+            bool userlogeedin = testuser.CheckLoginUser();
+            if (userlogeedin)
+            {
+                <a class="btn btn-info" href="@Url.Action("Home", new { controller = "Authentication", Area = "Security" })">Home</a>
+                <div class="dropdown">
+                    <button class="btn btn-success  " type="button" data-toggle="dropdown">
+                        MyEvent/Invitations
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header badge badge-success">Your Events Operatiosn</li>
+
+                        <li><a href="@Url.Action("Index", new { Controller = "Events", Area = "User" })">Create Event</a></li>
+                        <li><a href="@Url.Action("ViewMyEvent", new { Controller = "Events", Area = "User" })">View My Events</a></li>
+
+                        <li class="dropdown-header badge badge-danger">Invitations</li>
+                        <li>
+                        <li><a href="@Url.Action("Invitations", new { Controller = "Events", Area = "User" })">View Invitations</a></li></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-warning " type="button" data-toggle="dropdown">
+                        Events
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+
+                         
+                        <li><a href="@Url.Action("PublicEvents", new { Controller = "Events", Area = "User" })">Public Events</a></li>
+                        <li> <a href="@Url.Action("UpcomingEvents", new { Controller = "Events", Area = "User" })">Upcoming Events</a></li>
+                        <li><a href="@Url.Action("PastEvents", new { Controller = "Events", Area = "User" })">Past Events</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-danger" href="@Url.Action("Logout", new { Controller = "Authentication", Area = "Security" })">Logout</a> 
+
+            }
+            else
+            {
+                <a class="btn btn-info" href="/Home/Index">Home</a>
+                <div class="dropdown">
+                    <button class="btn btn-warning " type="button" data-toggle="dropdown">
+                        Events
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+
+                         <li><a href="@Url.Action("PublicEvents", new { Controller = "Events", Area = "User" })">Public Events</a></li>
+                        <li> <a href="@Url.Action("UpcomingEvents", new { Controller = "Events", Area = "User" })">Upcoming Events</a></li>
+                        <li><a href="@Url.Action("PastEvents", new { Controller = "Events", Area = "User" })">Past Events</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-success" href="@Url.Action("Login", new { Controller = "Authentication", Area = "Security" })">Login</a>
+                <a class="btn btn-danger" href="@Url.Action("Register", new { Controller = "Authentication", Area = "Security" })">Register</a>
+
+            }
+        }
+
+        @{
+            if (userlogeedin)
+            {
+                int userId = testuser.LoggedUserId();
+                string userRole = testuser.GetUserRole(userId);
+                if (userRole == "A")
+                {
+                    <a class="btn btn-info" href="/Admin/AllUsers">View Users</a>
+                    <a class="btn btn-info" href="/Admin/AllEvents">View All Events</a>
+                }
+            }
+        }
+
+        <a class="btn btn-primary" href="http://helpdesk.nagarro.com/" target="_blank">Customer-Support</a>
+    </nav>
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+ 
+        <footer>
+            <p> @DateTime.Now.Year - Book Reading Event</p>
+        </footer>
+    </div>
+ 
+
+
+</body>
+
+</html>

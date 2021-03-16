@@ -1,0 +1,72 @@
+﻿@model DataLayer.EntityModel.Event
+@{
+    ViewBag.Title = "ViewPublicDetail";
+}
+<h2 class="alert" style="background-color:#2F4F4F;color:white;text-align:center">Events Details</h2>
+<div style="align-content:center;">
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+             
+            Organised By
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EventName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EventDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventOtherDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EventOtherDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EventLocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDuration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EventDuration)
+        </dd>
+         <dt>
+                Total Invetations :
+            </dt>
+
+            <dd>
+                @ViewBag.Count
+            </dd> 
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EventDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventStartTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EventStartTime)
+        </dd>
+        
+    </dl>
+</div>
+<p>
+    @* @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
+        @Html.ActionLink("Back to List", "Index") *@
+</p>

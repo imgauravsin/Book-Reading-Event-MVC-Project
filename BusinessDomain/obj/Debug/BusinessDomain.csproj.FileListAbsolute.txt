@@ -1,0 +1,30 @@
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\BusinessDomain.dll.config
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\BusinessDomain.dll
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\BusinessDomain.pdb
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\DataLayer.dll
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\EntityFramework.dll
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\DataLayer.pdb
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\DataLayer.dll.config
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\EntityFramework.xml
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\obj\Debug\BusinessDomain.csprojAssemblyReference.cache
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\obj\Debug\BusinessDomain.csproj.CoreCompileInputs.cache
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\obj\Debug\BusinessDomain.csproj.CopyComplete
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\obj\Debug\BusinessDomain.dll
+C:\Users\gauravsingh03\source\repos\Project\BusinessDomain\obj\Debug\BusinessDomain.pdb
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\BusinessDomain.dll.config
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\BusinessDomain.dll
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\BusinessDomain.pdb
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\DataLayer.dll
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\EntityFramework.dll
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\DataLayer.pdb
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\DataLayer.dll.config
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\EntityFramework.xml
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\obj\Debug\BusinessDomain.csprojAssemblyReference.cache
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\obj\Debug\BusinessDomain.csproj.CoreCompileInputs.cache
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\obj\Debug\BusinessDomain.csproj.CopyComplete
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\obj\Debug\BusinessDomain.dll
+C:\Users\gauravsingh03\Desktop\Gaurav_Data\MVC Update\1503\Project\BusinessDomain\obj\Debug\BusinessDomain.pdb

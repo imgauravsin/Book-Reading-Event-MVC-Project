@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DataLayer.EntityModel.User>
+@{ 
+    ViewBag.Title = "AllUsers";
+}
+<h2 class="alert" style="background-color:#2F4F4F;color:white;text-align:center">All Users</h2>
+<table class="table" border="1">
+    <tr style="background-color:#2F4F4F;color:white;text-align:center">
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.UserRole)
+        </th>
+       
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+             
+            <td>
+                @Html.DisplayFor(modelItem => item.UserRole)
+            </td>
+        </tr>
+    }
+</table>

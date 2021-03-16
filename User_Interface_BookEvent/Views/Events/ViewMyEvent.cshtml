@@ -1,0 +1,108 @@
+﻿@model IEnumerable<DataLayer.EntityModel.Event>
+@{
+    ViewBag.Title = "ViewMyEvent";
+}
+<h2 class="alert" style="background-color:#2F4F4F;color:white;text-align:center">My Events</h2>
+<a class="btn btn-danger" href="@Url.Action("Index")">Create New Event</a>
+<hr />
+<p class="alert alert-success"><b>Warning  !</b>  You Can not Edit the Past Event </p>
+ 
+<table class="table" border="1">
+    <tr style="background-color:#2F4F4F;color:white;text-align:center">
+        <th>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventOtherDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventStartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventActive)
+        </th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        var eventDate = item.EventDate.ToString("yyyy-MM-dd");
+        var currentDate = DateTime.Now.ToString("yyyy-MM-dd");
+        DateTime eDate = Convert.ToDateTime(eventDate);
+        DateTime cDate = Convert.ToDateTime(currentDate);
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventOtherDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventDuration)
+            </td>
+            <td>
+                @{ var eventType = "Private";
+                    if (item.EventType == 2)
+                    {
+                        eventType = "Public";
+                    }
+                }
+                @Html.DisplayFor(modelItem => eventType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventActive)
+            </td>
+
+            <td>
+                @if( (eDate < cDate)){
+                <button class="btn btn-primary" disabled>Edit</button>
+                }
+                else { 
+                    <a class="btn btn-primary" href="@Url.Action("Edit", new { id = item.EventId })">Edit</a> 
+                }
+
+                <a class="btn btn-warning" href="@Url.Action("ViewPublicDetail", new { id = item.EventId })">Details</a>
+                <a class="btn btn-danger" href="@Url.Action("Delete", new { id = item.EventId })">Delete</a>
+
+                @if (item.EventType == 1)
+                {
+                    <a class="btn btn-info" href="@Url.Action("Invite", new { id = item.EventId })">Invite User</a>
+
+                }
+            </td>
+        </tr>
+    }
+</table>
